@@ -1,0 +1,4 @@
+0 ICON "ReferenceFinder.ico"
+ICON_FRAME ICON "ReferenceFinder.ico"
+#include "wx/msw/wx.rc"
+

@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>ReferenceFinder 5 - Menus</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="StyleSheet" href="reffinder.css" type="text/css">
+</head>
+<body>
+
+<h1 align="center"><em>Menus</em></h1>
+
+<p>
+This section describes each of the menu commands in <em>ReferenceFinder</em>.
+The menus are:
+</p>
+
+<br>
+
+<ul>
+  <li>
+    <a href="#App">Application</a> Menu
+  </li>
+  <li>
+    <a href="#File">File</a> Menu
+  </li>
+  <li>
+    <a href="#Edit">Edit</a> Menu
+  </li>
+  <li>
+    <a href="#Action">Action</a> Menu
+  </li>
+  <li>
+    <a href="#Window">Window</a> Menu
+  </li>
+  <li>
+    <a href="#Help">Help</a> Menu
+  </li>
+</ul>
+
+<p>
+The commands in each menu and their descriptions follow.
+</p>
+
+
+
+<!--========================================================================-->
+<h2><a name="App">Application Menu</a></h2>
+
+<h3>Application->About ReferenceFinder...</h3>
+<p>
+Puts up a dialog box that displays brief information about the program, the
+version, and the terms of usage.
+</p>
+<p>
+This box shows up the first time you run the application after the splash
+screen; a checkbox lets you turn off its display thereafter.
+</p>
+<p>
+The <b>About ReferenceFinder...</b> command shows up under the <b>Help</b> menu
+on non-Mac platforms.
+</p>
+<h3>Application->Preferences</h3>
+<p>
+Sets application-wide preferences for <em>ReferenceFinder</em>. See the
+<a href="windows.htm#Preferences">Preferences Window</a> for a detailed
+description of the contents and their function.
+</p>
+<p>
+The <b>Preferences</b> command shows up under the <b>File</b> menu on non-Mac
+platforms.
+</p>
+
+<h3>Application->Quit</h3>
+<p>
+Exit the program. You can quit even if a calculation (database rebuild
+or statistical analysis) is in progress.
+</p>
+<p>
+The <b>Quit</b> command shows up under the <b>File</b> menu and is called
+<b>Exit</b> on non-Mac platforms.
+</p>
+
+
+
+
+<!-- ========================================================================= -->
+<h2><a name="File">File Menu</a></h2>
+
+<h3>File->Export PostScript...</h3>
+<p>
+Exports a text file containing PostScript code that prints the diagrams. Due
+to differences between screen layout and printing settings, the diagram layout 
+in the PostScript file will not exactly match the screen display and/or printouts.
+</p>
+
+<h3>File->Print...</h3>
+<p>
+Print the currently-displayed references. The printout will be scaled to the
+full width of the page, with page breaks, if needed, between folding sequences.
+</p>
+
+<h3>File->Page Margins...</h3>
+<p>
+Lets you choose the margins for printing. This item is only present on
+Macintosh, as on other platforms you can set the margins in the Print Setup...
+dialog.
+</p>
+
+<h3>File->Print Setup...</h3>
+<p>
+Set up the page for printing.
+</p>
+
+<h3>File->Print Preview...</h3>
+<p>
+Preview the print image before printing.
+</p>
+
+
+
+
+<!-- ========================================================================= -->
+<h2><a name="Edit">Edit Menu</a></h2>
+
+<h3>Edit->Undo</h3>
+<p>
+Undo the last modification in a text box.
+</p>
+
+<h3>Edit->Cut</h3>
+<p>
+Cut the current text selection.
+</p>
+
+<h3>Edit->Copy</h3>
+<p>
+Copy the current text selection.
+</p>
+
+<h3>Edit->Paste</h3>
+<p>
+Paste the current text selection.
+</p>
+
+<h3>Edit->Clear</h3>
+<p>
+Delete the current text selection.
+</p>
+
+
+
+<!--=========================================================================-->
+<h2><a name="Action">Action Menu</a></h2>
+
+<h3>Action->Seek Marks/Lines</h3>
+<p>
+Toggle the radio button in the main window between seeking marks and lines.
+Using the mouse, it's probably quicker and easier to just click on the radio
+button itself, but this menu item serves as a reminder of the quickest way to
+toggle between the two: type command-T (control-T on non-Mac platforms).
+</p>
+
+<h3>Action->Get References</h3>
+<p>
+Find a set of folding sequences for the reference (point or line) in the main
+window. This command is automatically performed if you hit the Return or Enter
+key while typing in one of the text boxes of the main window.
+</p>
+
+<h3>Action->Clear References</h3>
+<p>
+Clear the currently-displayed folding sequences. This is useful if you want to
+keep <em>ReferenceFinder</em> around on-screen at its minimum size.
+</p>
+
+<h3>Action->Rebuild Database</h3>
+<p>
+Begin reconstructing the database of marks and lines. Normally you will
+not need to execute this command -- database rebuild happens automatically when
+you apply changes to the database settings in the Preferences window -- but if
+you halted database reconstruction for some reason, you can restart it with
+this command.
+</p>
+
+<h3>Action->Calculate Statistics</h3>
+<p>
+Perform a statistical analysis of the database. This command performs a series
+of trials, picking random points within the paper, finding the folding sequence
+that gives the closest mark, and then computing the error between the two. The
+resulting error is binned. At the end of the analysis, the results are display
+in two ways: first, the percentage of trials that gave error less than a given
+amount; second, the error at various percentiles. The results are shown in the
+main window, however, they are not printable. 
+</p>
+<p>
+This command is useful primarily for comparing the performance of different
+database settings; you will not ordinarily use it.
+</p>
+
+<h3>Action->Halt Calculation</h3>
+<p>
+If the database is under construction, this command is displayed as <b>Halt
+Rebuild Database</b> and halts the construction of the database. The database
+will be left in a usable state, but only with those marks and lines calculated
+so far.
+</p>
+<p>
+If a statistical analysis is in progress, this command is displayed as <b>Halt
+Calculate Statistics</b> and halts the analysis. Results will be reported based
+on the trials accumulated so far.
+</p>
+
+
+
+
+<!===========================================================================-->
+<h2><a name="Window">Window Menu</a></h2>
+
+
+<ul><li>
+Note: this menu is only present on Mac platforms.
+</li></ul>
+
+
+<h3>Window->Minimize</h3>
+<p>
+Minimize the frontmost window.
+</p>
+
+<h3>Window->Zoom</h3>
+<p>
+Zoom out the frontmost window.
+</p>
+
+<h3>Window->Bring All to Front</h3>
+<p>
+Bring all windows to the front of the computer display.
+</p>
+
+<h3>Window->ReferenceFinder</h3>
+<p>
+Bring the main window to the front of the computer display.
+</p>
+
+
+
+
+<!===========================================================================-->
+<h2><a name="Help">Help Menu</a></h2>
+
+<h3>Help->Help</h3>
+<p>
+Show these help pages.
+</p>
+
+<p align="center">
+<b>Previous: <a href="windows.htm">Windows</a>&nbsp;&nbsp;&nbsp;</b>
+</p>
+
+</body>
+</html>

@@ -1,0 +1,752 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1842CAFB085664390032BCF7 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842CAF7085664390032BCF7 /* AGL.framework */; };
+		1842CAFC085664390032BCF7 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842CAF8085664390032BCF7 /* IOKit.framework */; };
+		1842CAFD085664390032BCF7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842CAF9085664390032BCF7 /* OpenGL.framework */; };
+		1842CAFE085664390032BCF7 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842CAFA085664390032BCF7 /* WebKit.framework */; };
+		4086D0E9063BBC5B00D4CD53 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20286C33FDCF999611CA2CEA /* Carbon.framework */; };
+		4086D0EC063BBC5B00D4CD53 /* System.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA60173504D423C000000080 /* System.framework */; };
+		C032A2A60A006291000D96AD /* RFPrefsDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C032A2A40A006291000D96AD /* RFPrefsDialog.cpp */; };
+		C032A3280A011220000D96AD /* RFThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C032A3260A01121F000D96AD /* RFThread.cpp */; };
+		C0529D0F0AFA72150082FD5F /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0529D0E0AFA72150082FD5F /* AppKit.framework */; };
+		C06C4FAA0A09DA3400996D47 /* RFStackSizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C06C4FA80A09DA3400996D47 /* RFStackSizer.cpp */; };
+		C06C50E30A0DF0B500996D47 /* about.htm in CopyFiles */ = {isa = PBXBuildFile; fileRef = C06C50E20A0DF0B400996D47 /* about.htm */; };
+		C07CF6B10A0F7CF200F9F6EE /* RFPrintout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C07CF6AF0A0F7CF200F9F6EE /* RFPrintout.cpp */; };
+		C09547D50A2D44D900BFE53C /* libwx_mac_static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C09547D40A2D44D900BFE53C /* libwx_mac_static.a */; };
+		C0C7329409FD941500145A9B /* RFFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0C7329009FD941500145A9B /* RFFrame.cpp */; };
+		C0C7329509FD941500145A9B /* RFApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0C7329109FD941500145A9B /* RFApp.cpp */; };
+		C0C732ED09FDA06D00145A9B /* RFCanvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0C732EB09FDA06D00145A9B /* RFCanvas.cpp */; };
+		C0C7332509FDB7E000145A9B /* lexer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0D646BA09FD3E350015A133 /* lexer.cpp */; };
+		C0C7332609FDB7E300145A9B /* parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0D646BC09FD3E350015A133 /* parser.cpp */; };
+		C0C7332709FDB7EA00145A9B /* ReferenceFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0D646BE09FD3E350015A133 /* ReferenceFinder.cpp */; };
+		C0C86A400A19613600AFA3E1 /* help.zip in CopyFiles */ = {isa = PBXBuildFile; fileRef = C0C86A3E0A19612600AFA3E1 /* help.zip */; };
+		C0C86A640A196BCD00AFA3E1 /* RFHtmlHelp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0C86A620A196BCD00AFA3E1 /* RFHtmlHelp.cpp */; };
+		C0D646C509FD3E650015A133 /* ReferenceFinder_console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0D646C009FD3E350015A133 /* ReferenceFinder_console.cpp */; };
+		C0D646C609FD3E6A0015A133 /* lexer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0D646BA09FD3E350015A133 /* lexer.cpp */; };
+		C0D646C709FD3E6F0015A133 /* parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0D646BC09FD3E350015A133 /* parser.cpp */; };
+		C0D646C809FD3E7F0015A133 /* ReferenceFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0D646BE09FD3E350015A133 /* ReferenceFinder.cpp */; };
+		C0D6470109FD468D0015A133 /* RFPrefix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0D646F909FD46390015A133 /* RFPrefix.cpp */; };
+		C0D6470409FD4C3B0015A133 /* referencefinder.icns in Resources */ = {isa = PBXBuildFile; fileRef = C0D6470309FD4C3B0015A133 /* referencefinder.icns */; };
+		C0EBD6320A0EE9DD00AA607C /* SplashScreen.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = C0EBD6310A0EE9DD00AA607C /* SplashScreen.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C0529E020AFA84930082FD5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 409F03930977B96200D1030F /* wxWindows.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4086C8CB063AB30000D4CD53;
+			remoteInfo = static;
+		};
+		C0529E040AFA84930082FD5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 409F03930977B96200D1030F /* wxWindows.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4086CBE1063AB30000D4CD53;
+			remoteInfo = dynamic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C06C50F30A0DF0E100996D47 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 12;
+			files = (
+				C06C50E30A0DF0B500996D47 /* about.htm in CopyFiles */,
+				C0EBD6320A0EE9DD00AA607C /* SplashScreen.png in CopyFiles */,
+				C0C86A400A19613600AFA3E1 /* help.zip in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1842CAF7085664390032BCF7 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
+		1842CAF8085664390032BCF7 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		1842CAF9085664390032BCF7 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		1842CAFA085664390032BCF7 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		1864B4F408566CAB00E32E9B /* ReferenceFinder 4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReferenceFinder 4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		20286C33FDCF999611CA2CEA /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		4086D0EF063BBC5B00D4CD53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Info.plist; path = resources/Info.plist; sourceTree = "<group>"; };
+		409F03930977B96200D1030F /* wxWindows.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wxWindows.xcodeproj; path = "build/wxMac-2.7/src/wxWindows.xcodeproj"; sourceTree = "<group>"; };
+		C032A2A40A006291000D96AD /* RFPrefsDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = RFPrefsDialog.cpp; sourceTree = "<group>"; };
+		C032A2A50A006291000D96AD /* RFPrefsDialog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = RFPrefsDialog.h; sourceTree = "<group>"; };
+		C032A3250A01121F000D96AD /* RFThread.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = RFThread.h; sourceTree = "<group>"; };
+		C032A3260A01121F000D96AD /* RFThread.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = RFThread.cpp; sourceTree = "<group>"; };
+		C0529D0E0AFA72150082FD5F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		C06C4FA70A09DA3400996D47 /* RFStackSizer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = RFStackSizer.h; sourceTree = "<group>"; };
+		C06C4FA80A09DA3400996D47 /* RFStackSizer.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = RFStackSizer.cpp; sourceTree = "<group>"; };
+		C06C50AB0A0DC38900996D47 /* RFVersion.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = RFVersion.h; sourceTree = "<group>"; };
+		C06C50E20A0DF0B400996D47 /* about.htm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = about.htm; sourceTree = "<group>"; };
+		C07CF6AF0A0F7CF200F9F6EE /* RFPrintout.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = RFPrintout.cpp; sourceTree = "<group>"; };
+		C07CF6B00A0F7CF200F9F6EE /* RFPrintout.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = RFPrintout.h; sourceTree = "<group>"; };
+		C09547D40A2D44D900BFE53C /* libwx_mac_static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwx_mac_static.a; path = "build/wxMac-2.6/src/build/Deployment/libwx_mac_static.a"; sourceTree = "<group>"; };
+		C0C7328F09FD941500145A9B /* RFApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = RFApp.h; sourceTree = "<group>"; };
+		C0C7329009FD941500145A9B /* RFFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = RFFrame.cpp; sourceTree = "<group>"; };
+		C0C7329109FD941500145A9B /* RFApp.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = RFApp.cpp; sourceTree = "<group>"; };
+		C0C7329209FD941500145A9B /* RFFrame.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = RFFrame.h; sourceTree = "<group>"; };
+		C0C732EA09FDA06D00145A9B /* RFCanvas.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = RFCanvas.h; sourceTree = "<group>"; };
+		C0C732EB09FDA06D00145A9B /* RFCanvas.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = RFCanvas.cpp; sourceTree = "<group>"; };
+		C0C86A3E0A19612600AFA3E1 /* help.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = help.zip; path = build/help/help.zip; sourceTree = "<group>"; };
+		C0C86A620A196BCD00AFA3E1 /* RFHtmlHelp.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = RFHtmlHelp.cpp; sourceTree = "<group>"; };
+		C0C86A630A196BCD00AFA3E1 /* RFHtmlHelp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = RFHtmlHelp.h; sourceTree = "<group>"; };
+		C0D646B809FD3E350015A133 /* icon.xpm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = icon.xpm; sourceTree = "<group>"; };
+		C0D646BA09FD3E350015A133 /* lexer.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = lexer.cpp; sourceTree = "<group>"; };
+		C0D646BB09FD3E350015A133 /* lexer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = lexer.h; sourceTree = "<group>"; };
+		C0D646BC09FD3E350015A133 /* parser.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = parser.cpp; sourceTree = "<group>"; };
+		C0D646BD09FD3E350015A133 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
+		C0D646BE09FD3E350015A133 /* ReferenceFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = ReferenceFinder.cpp; sourceTree = "<group>"; };
+		C0D646BF09FD3E350015A133 /* ReferenceFinder.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ReferenceFinder.h; sourceTree = "<group>"; };
+		C0D646C009FD3E350015A133 /* ReferenceFinder_console.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = ReferenceFinder_console.cpp; path = console/ReferenceFinder_console.cpp; sourceTree = "<group>"; };
+		C0D646F909FD46390015A133 /* RFPrefix.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = RFPrefix.cpp; sourceTree = "<group>"; };
+		C0D646FA09FD46390015A133 /* RFPrefix.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = RFPrefix.h; sourceTree = "<group>"; };
+		C0D6470309FD4C3B0015A133 /* referencefinder.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = referencefinder.icns; path = resources/referencefinder.icns; sourceTree = "<group>"; };
+		C0D6470609FD672E0015A133 /* reffinder4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = reffinder4; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0EBD6310A0EE9DD00AA607C /* SplashScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen.png; sourceTree = "<group>"; };
+		CA60173504D423C000000080 /* System.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = System.framework; path = /System/Library/Frameworks/System.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4086D0E8063BBC5B00D4CD53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4086D0E9063BBC5B00D4CD53 /* Carbon.framework in Frameworks */,
+				4086D0EC063BBC5B00D4CD53 /* System.framework in Frameworks */,
+				1842CAFB085664390032BCF7 /* AGL.framework in Frameworks */,
+				1842CAFC085664390032BCF7 /* IOKit.framework in Frameworks */,
+				1842CAFD085664390032BCF7 /* OpenGL.framework in Frameworks */,
+				1842CAFE085664390032BCF7 /* WebKit.framework in Frameworks */,
+				C09547D50A2D44D900BFE53C /* libwx_mac_static.a in Frameworks */,
+				C0529D0F0AFA72150082FD5F /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0D646A309FD3D140015A133 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1864B4F608566CB300E32E9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1864B4F408566CAB00E32E9B /* ReferenceFinder 4.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20286C29FDCF999611CA2CEA /* ¬´PROJECTNAME¬ª */ = {
+			isa = PBXGroup;
+			children = (
+				409F03930977B96200D1030F /* wxWindows.xcodeproj */,
+				C0D646B509FD3E350015A133 /* source */,
+				C0EBD6300A0EE9DD00AA607C /* images */,
+				20286C2CFDCF999611CA2CEA /* mac/resources */,
+				C0C86A3B0A19610700AFA3E1 /* mac/build/help */,
+				20286C32FDCF999611CA2CEA /* Frameworks */,
+				C09547D00A2D44AF00BFE53C /* Libraries */,
+				1864B4F608566CB300E32E9B /* Products */,
+				C0D6470609FD672E0015A133 /* reffinder4 */,
+			);
+			name = "¬´PROJECTNAME¬ª";
+			sourceTree = "<group>";
+		};
+		20286C2CFDCF999611CA2CEA /* mac/resources */ = {
+			isa = PBXGroup;
+			children = (
+				C0D6470309FD4C3B0015A133 /* referencefinder.icns */,
+				4086D0EF063BBC5B00D4CD53 /* Info.plist */,
+			);
+			name = mac/resources;
+			sourceTree = "<group>";
+		};
+		20286C32FDCF999611CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0529D0E0AFA72150082FD5F /* AppKit.framework */,
+				20286C33FDCF999611CA2CEA /* Carbon.framework */,
+				CA60173504D423C000000080 /* System.framework */,
+				1842CAF7085664390032BCF7 /* AGL.framework */,
+				1842CAF8085664390032BCF7 /* IOKit.framework */,
+				1842CAF9085664390032BCF7 /* OpenGL.framework */,
+				1842CAFA085664390032BCF7 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0529DFD0AFA84930082FD5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0529E030AFA84930082FD5F /* libwx_mac_static.a */,
+				C0529E050AFA84930082FD5F /* libwx_mac.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C06C50E10A0DF0B400996D47 /* about */ = {
+			isa = PBXGroup;
+			children = (
+				C06C50E20A0DF0B400996D47 /* about.htm */,
+			);
+			path = about;
+			sourceTree = "<group>";
+		};
+		C09547D00A2D44AF00BFE53C /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C09547D40A2D44D900BFE53C /* libwx_mac_static.a */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		C0C86A3B0A19610700AFA3E1 /* mac/build/help */ = {
+			isa = PBXGroup;
+			children = (
+				C0C86A3E0A19612600AFA3E1 /* help.zip */,
+			);
+			name = mac/build/help;
+			sourceTree = "<group>";
+		};
+		C0D646B509FD3E350015A133 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				C06C50AB0A0DC38900996D47 /* RFVersion.h */,
+				C06C50E10A0DF0B400996D47 /* about */,
+				C0D646B909FD3E350015A133 /* model */,
+				C0D646E809FD416A0015A133 /* console */,
+				C0D646B609FD3E350015A133 /* gui */,
+			);
+			name = source;
+			path = ../source;
+			sourceTree = SOURCE_ROOT;
+		};
+		C0D646B609FD3E350015A133 /* gui */ = {
+			isa = PBXGroup;
+			children = (
+				C0D646F909FD46390015A133 /* RFPrefix.cpp */,
+				C0D646FA09FD46390015A133 /* RFPrefix.h */,
+				C0C7329109FD941500145A9B /* RFApp.cpp */,
+				C0C7328F09FD941500145A9B /* RFApp.h */,
+				C0C732EB09FDA06D00145A9B /* RFCanvas.cpp */,
+				C0C732EA09FDA06D00145A9B /* RFCanvas.h */,
+				C0C7329009FD941500145A9B /* RFFrame.cpp */,
+				C0C7329209FD941500145A9B /* RFFrame.h */,
+				C0C86A620A196BCD00AFA3E1 /* RFHtmlHelp.cpp */,
+				C0C86A630A196BCD00AFA3E1 /* RFHtmlHelp.h */,
+				C032A2A40A006291000D96AD /* RFPrefsDialog.cpp */,
+				C032A2A50A006291000D96AD /* RFPrefsDialog.h */,
+				C07CF6AF0A0F7CF200F9F6EE /* RFPrintout.cpp */,
+				C07CF6B00A0F7CF200F9F6EE /* RFPrintout.h */,
+				C06C4FA70A09DA3400996D47 /* RFStackSizer.h */,
+				C06C4FA80A09DA3400996D47 /* RFStackSizer.cpp */,
+				C032A3250A01121F000D96AD /* RFThread.h */,
+				C032A3260A01121F000D96AD /* RFThread.cpp */,
+				C0D646B809FD3E350015A133 /* icon.xpm */,
+			);
+			path = gui;
+			sourceTree = "<group>";
+		};
+		C0D646B909FD3E350015A133 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C0D646BA09FD3E350015A133 /* lexer.cpp */,
+				C0D646BB09FD3E350015A133 /* lexer.h */,
+				C0D646BC09FD3E350015A133 /* parser.cpp */,
+				C0D646BD09FD3E350015A133 /* parser.h */,
+				C0D646BE09FD3E350015A133 /* ReferenceFinder.cpp */,
+				C0D646BF09FD3E350015A133 /* ReferenceFinder.h */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C0D646E809FD416A0015A133 /* console */ = {
+			isa = PBXGroup;
+			children = (
+				C0D646C009FD3E350015A133 /* ReferenceFinder_console.cpp */,
+			);
+			name = console;
+			sourceTree = "<group>";
+		};
+		C0EBD6300A0EE9DD00AA607C /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C0EBD6310A0EE9DD00AA607C /* SplashScreen.png */,
+			);
+			name = images;
+			path = ../source/images;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4086D0E3063BBC5B00D4CD53 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4086D0E2063BBC5B00D4CD53 /* gui */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1842CAA008565A280032BCF7 /* Build configuration list for PBXNativeTarget "gui" */;
+			buildPhases = (
+				4086D0E3063BBC5B00D4CD53 /* Headers */,
+				C06C50F30A0DF0E100996D47 /* CopyFiles */,
+				4086D0E4063BBC5B00D4CD53 /* Resources */,
+				4086D0E6063BBC5B00D4CD53 /* Sources */,
+				4086D0E8063BBC5B00D4CD53 /* Frameworks */,
+				4086D0ED063BBC5B00D4CD53 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gui;
+			productInstallPath = "$(HOME)/Applications";
+			productName = minimalStaticDebug;
+			productReference = 1864B4F408566CAB00E32E9B /* ReferenceFinder 4.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C0D646A409FD3D140015A133 /* console */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0D646A809FD3D170015A133 /* Build configuration list for PBXNativeTarget "console" */;
+			buildPhases = (
+				C0D646A209FD3D140015A133 /* Sources */,
+				C0D646A309FD3D140015A133 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = console;
+			productName = console;
+			productReference = C0D6470609FD672E0015A133 /* reffinder4 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20286C28FDCF999611CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1842CAB408565A280032BCF7 /* Build configuration list for PBXProject "ReferenceFinder" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 20286C29FDCF999611CA2CEA /* ¬´PROJECTNAME¬ª */;
+			productRefGroup = 20286C29FDCF999611CA2CEA /* ¬´PROJECTNAME¬ª */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C0529DFD0AFA84930082FD5F /* Products */;
+					ProjectRef = 409F03930977B96200D1030F /* wxWindows.xcodeproj */;
+				},
+			);
+			targets = (
+				C0D646A409FD3D140015A133 /* console */,
+				4086D0E2063BBC5B00D4CD53 /* gui */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C0529E030AFA84930082FD5F /* libwx_mac_static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libwx_mac_static.a;
+			remoteRef = C0529E020AFA84930082FD5F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C0529E050AFA84930082FD5F /* libwx_mac.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libwx_mac.dylib;
+			remoteRef = C0529E040AFA84930082FD5F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4086D0E4063BBC5B00D4CD53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0D6470409FD4C3B0015A133 /* referencefinder.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		4086D0ED063BBC5B00D4CD53 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4086D0E6063BBC5B00D4CD53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0C7332509FDB7E000145A9B /* lexer.cpp in Sources */,
+				C0C7332609FDB7E300145A9B /* parser.cpp in Sources */,
+				C0C7332709FDB7EA00145A9B /* ReferenceFinder.cpp in Sources */,
+				C0D6470109FD468D0015A133 /* RFPrefix.cpp in Sources */,
+				C0C7329509FD941500145A9B /* RFApp.cpp in Sources */,
+				C0C732ED09FDA06D00145A9B /* RFCanvas.cpp in Sources */,
+				C0C7329409FD941500145A9B /* RFFrame.cpp in Sources */,
+				C0C86A640A196BCD00AFA3E1 /* RFHtmlHelp.cpp in Sources */,
+				C032A2A60A006291000D96AD /* RFPrefsDialog.cpp in Sources */,
+				C07CF6B10A0F7CF200F9F6EE /* RFPrintout.cpp in Sources */,
+				C032A3280A011220000D96AD /* RFThread.cpp in Sources */,
+				C06C4FAA0A09DA3400996D47 /* RFStackSizer.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0D646A209FD3D140015A133 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0D646C609FD3E6A0015A133 /* lexer.cpp in Sources */,
+				C0D646C709FD3E6F0015A133 /* parser.cpp in Sources */,
+				C0D646C809FD3E7F0015A133 /* ReferenceFinder.cpp in Sources */,
+				C0D646C509FD3E650015A133 /* ReferenceFinder_console.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1842CAA108565A280032BCF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(NATIVE_ARCH)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_ENABLE_SYMBOL_SEPARATION = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ../source/gui/RFPrefix.h;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NO_GCC_PRAGMA,
+					__WXMAC__,
+					"wxUSE_BASE=1",
+					"_FILE_OFFSET_BITS=64",
+					_LARGE_FILES,
+					"__WXMAC_XCODE__=1",
+					"WX_PRECOMP=1",
+					MACOS_CLASSIC,
+					"__WXDEBUG__=1",
+				);
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				INFOPLIST_FILE = resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"build/wxMac-2.7/src/build/Development",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/build/wxMac-2.7/src/build/Deployment\"";
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				OTHER_LDFLAGS = (
+					"-liconv",
+					"-lz",
+				);
+				PRODUCT_NAME = "ReferenceFinder 4";
+				UNSTRIPPED_PRODUCT = "<Multiple values>";
+				USER_HEADER_SEARCH_PATHS = "../source/** build/wxMac-2.7/include build/wxMac-2.7/src/build/include";
+				USE_SEPARATE_HEADERMAPS = YES;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		1842CAA208565A280032BCF7 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_ENABLE_SYMBOL_SEPARATION = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ../source/gui/RFPrefix.h;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NO_GCC_PRAGMA,
+					__WXMAC__,
+					"wxUSE_BASE=1",
+					"_FILE_OFFSET_BITS=64",
+					_LARGE_FILES,
+					"__WXMAC_XCODE__=1",
+					"WX_PRECOMP=1",
+					MACOS_CLASSIC,
+				);
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				INFOPLIST_FILE = resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"build/wxMac-2.7/src/build/Deployment",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/build/wxMac-2.7/src/build/Deployment\"";
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				ONLY_LINK_ESSENTIAL_SYMBOLS = YES;
+				OTHER_LDFLAGS = (
+					"-liconv",
+					"-lz",
+				);
+				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
+				PRODUCT_NAME = "ReferenceFinder 4";
+				SEPARATE_STRIP = YES;
+				STRIP_INSTALLED_PRODUCT = YES;
+				UNSTRIPPED_PRODUCT = "<Multiple values>";
+				USER_HEADER_SEARCH_PATHS = "../source/** build/wxMac-2.7/include build/wxMac-2.7/src/build/include";
+				USE_SEPARATE_HEADERMAPS = YES;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Deployment;
+		};
+		1842CAB508565A280032BCF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = __WXDEBUG__;
+				INFOPLIST_FILE = "";
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PRODUCT_NAME = "";
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				USER_HEADER_SEARCH_PATHS = "";
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1842CAB608565A280032BCF7 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = stabs;
+				DynamicLibName = libwx_mac.dylib;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				INFOPLIST_FILE = "";
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PRODUCT_NAME = "";
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				USER_HEADER_SEARCH_PATHS = "";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		C0D6464809FD33D40015A133 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(NATIVE_ARCH)";
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_ENABLE_SYMBOL_SEPARATION = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ../source/gui/RFPrefix.h;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NO_GCC_PRAGMA,
+					__WXMAC__,
+					"wxUSE_BASE=1",
+					"_FILE_OFFSET_BITS=64",
+					_LARGE_FILES,
+					"__WXMAC_XCODE__=1",
+					"WX_PRECOMP=1",
+					MACOS_CLASSIC,
+					RFDEBUG,
+				);
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				INFOPLIST_FILE = resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"build/wxMac-2.7/src/build/Deployment",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/build/wxMac-2.7/src/build/Deployment\"";
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				OTHER_LDFLAGS = (
+					"-liconv",
+					"-lz",
+				);
+				PRODUCT_NAME = "ReferenceFinder 4";
+				UNSTRIPPED_PRODUCT = "<Multiple values>";
+				USER_HEADER_SEARCH_PATHS = "../source/** build/wxMac-2.7/include build/wxMac-2.7/src/build/include";
+				USE_SEPARATE_HEADERMAPS = YES;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		C0D6464A09FD33D40015A133 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = stabs;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				INFOPLIST_FILE = "";
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PRODUCT_NAME = "";
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				USER_HEADER_SEARCH_PATHS = "";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		C0D646A909FD3D170015A133 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "";
+				INSTALL_PATH = "$(HOME)/bin";
+				LIBRARY_SEARCH_PATHS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = reffinder4;
+				USER_HEADER_SEARCH_PATHS = "../source/**";
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C0D646AA09FD3D170015A133 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "";
+				INSTALL_PATH = "$(HOME)/bin";
+				LIBRARY_SEARCH_PATHS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = reffinder4;
+				USER_HEADER_SEARCH_PATHS = "../source/**";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		C0D646AB09FD3D170015A133 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = "";
+				INSTALL_PATH = "$(HOME)/bin";
+				LIBRARY_SEARCH_PATHS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = reffinder4;
+				USER_HEADER_SEARCH_PATHS = "../source/**";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1842CAA008565A280032BCF7 /* Build configuration list for PBXNativeTarget "gui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1842CAA108565A280032BCF7 /* Debug */,
+				C0D6464809FD33D40015A133 /* Development */,
+				1842CAA208565A280032BCF7 /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1842CAB408565A280032BCF7 /* Build configuration list for PBXProject "ReferenceFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1842CAB508565A280032BCF7 /* Debug */,
+				C0D6464A09FD33D40015A133 /* Development */,
+				1842CAB608565A280032BCF7 /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C0D646A809FD3D170015A133 /* Build configuration list for PBXNativeTarget "console" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0D646A909FD3D170015A133 /* Debug */,
+				C0D646AA09FD3D170015A133 /* Development */,
+				C0D646AB09FD3D170015A133 /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20286C28FDCF999611CA2CEA /* Project object */;
+}

@@ -1,0 +1,20 @@
+#!/bin/bash
+# usage:
+# ./build-rf-help
+#
+# Completely rebuilds the help.zip file from the source code and puts the zip
+# file in the build directory, where it will be copied into the app the next
+# time the XCode project ReferenceFinder.xcodeproj is built.
+
+if [ ! -d build ]; then
+  mkdir build
+fi
+if [ ! -d build/help ]; then
+  mkdir build/help
+fi
+
+cd ../source/help
+find . -type f \( -name '*.htm' -o -name '*.png' -o -name '*.jpg' -o -name '*.hhp' -o -name '*.hhk' -o -name '*.hhc' \) -print | zip -D ../../mac/build/help/help -@
+cd ../../mac
+
+exit 0

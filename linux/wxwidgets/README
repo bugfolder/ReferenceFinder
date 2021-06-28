@@ -1,0 +1,76 @@
+BUILDING wxWidgets for ReferenceFinder 4.0 for Linux
+  by Carlos A. Furuti
+
+1. INTRODUCTION
+
+Several aspects of the wxWidgets library may be configured as
+compile-time options. Unfortunately, this means applications may
+depend on features not available on every binary distribution of
+wxWidgets. Therefore, if you want to compile ReferenceFinder 4.0 from
+source, you must also compile a properly configured wxWidgets source
+package, _even_ if you already have wxWidgets installed.
+
+2. GETTING wxWidgets
+
+Download the source code of wxWidgets from www.wxwidgets.org. You'll
+need the GTK package, wxGTK-<version at least 2.8.0>.tar.bz2 (or gz).
+Unpack it in a suitable temporary directory (a release build,
+explained below, will require about 190 MB). From now on, we'll
+abbreviate the wxWidgets directory (containing, e.g., the "configure"
+file) as WXD.  Take note of this directory path, we'll need it in
+ReferenceFinder 4.0's own Makefile.
+
+3. PATCHING
+
+wxWidgets (at least up to and including version 2.8.0rc1) for GTK does
+not fully or correctly support some features required by
+ReferenceFinder 4.0, including:
+
+- printed pages (including PDF output) appear blank (actually the
+  margins are wrong); you may use the Export to PostScript command
+  as a workaround
+- thin lines with subpoint precision
+- clipping when printing
+
+The printing problem will be probably be addressed in wxGTK2.8.0rc2 or
+a later release; for a quick fix, if you only have 2.8.0rc1, expand
+the patch wxPatch2.8.0rc1.tar.gz in WXD. The top margin still appears
+wrong in the "Print Preview", but will be ok in the actual output.
+
+4. COMPILING
+
+Copy the build-wxw.sh file from this directory to WXD, then cd to WXD.
+
+wxWidgets may be compiled in a "release" or "debug" version, or both.
+ReferenceFinder 4.0 has no debug/release variants, so you'll probably
+create only wxWidget's release version and save some time and a lot of
+disk space.
+
+For building a static library (ReferenceFinder 4.0 uses a static
+library for portability reasons) in both versions, type:
+
+  sh build-wxw.sh
+
+If, as mostly usual, you don't want the debug version, type:
+
+  sh build-wxw.sh --nodebug
+
+If you don't want the release version, type:
+
+  sh build-wxw.sh --norelease
+
+If you slightly edited (without changing or creating new dependencies)
+wxWidgets or reapplied the patch, do as above adding "--noconfig",
+otherwise everything will be recompiled.
+
+Running build-wxw.sh will neither install wxWidgets nor disturb any
+existing installed wxWidgets. You may safely remove WXD after
+ReferenceFinder 4.0 is compiled and tested.
+
+You may now configure and compile ReferenceFinder.
+
+5. OPTIONAL NOTES
+
+If you have installed a dynamic version of wxWidgets configured
+according to ReferenceFinder 4.0's needs (inspect the build-wxw.sh),
+you might try adapting the latter's Makefile to use it.

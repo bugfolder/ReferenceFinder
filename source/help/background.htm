@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>ReferenceFinder - Background</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="StyleSheet" href="reffinder.css" type="text/css">
+</head>
+<body>
+
+<h1 align="center"><em>Background</em></h1>
+
+<h2>Genesis of the Problem</h2>
+<p>
+For most of the multi-hundred-year history of origami, new designs were most
+likely created by hands-on experimentation and they were passed down through
+the years by direct teaching, one person to another. Both of these traits led
+to the notion of origami as a sequential process; you began with an unmarked
+square and then built up the origami figure, making one or at most, a few folds
+at any one time. For all but the last few steps, every fold could be precisely,
+almost mathematically defined: "bring this corner to that corner;" "fold the
+edge up to the crease;" and so forth. Trial-and-error folding experimentation
+leads naturally to a step-by-step folding sequence; the harsh evolutionary
+pressure of teachability insured that in an era of word-of-mouth teaching, any
+origami design that didn't have a precise construction for critical reference
+points didn't survive.
+</p>
+<p>
+But the modern era of origami -- which dates roughly from the 1950s onward --
+saw two changes that were to revolutionize the art. First, Akira Yoshiazawa's
+notation for origami instruction became widely accepted, leading to an era of
+sharing of concepts and techniques that continues to this day. Second, early
+pioneers like Neal Elias began to create origami designs using a paradigm of
+"fitting all the parts" into the crease pattern, so that key folds were no
+longer defined by a sequence of folding steps, but instead were defined by
+potentially complex conditions that applied to the entire crease pattern. Any
+given vertex or crease could have its location defined with mathematical
+precision, but that definition was now entirely divorced from the folding
+sequence, if any, that led to its construction.
+</p>
+<p>
+Elias, Max Hulme, Emmanuel Mooser, and other practitioners of this early form
+of design used a technique called <em>box-pleating</em>, in which nearly all
+creases ran either vertically or horizontally on a regular grid of squares.
+This allowed a work-around method of folding: one could crease the paper
+lightly into the complete grid of squares (typically 16x16 or 24x24), then go
+back and make sharp the particular grid creases needed for the crease pattern,
+and, where necessary, add diagonal creases cutting across grid squares. This
+approach had the unfortunate side effect of leaving the crease grid behind on
+the finished fold, but it preserved something that had become very important in
+origami: the ability to construct the entire figure by folding alone, i.e.,
+without having to measure and/or mark points, which was (and still is)
+perceived as a weakness in the foldability of an origami figure.
+</p>
+<p>
+Alas, more was to come. Beginning in the 1960s, American artist John
+Montroll began to design animals and other origami figures at a high level of
+complexity. Like the box-pleaters, he designed the entire model before he ever
+began folding, so that he could insure that all of the needed "parts" fit
+within the square. Unlike the box-pleaters, Montroll utilized a wide variety of
+symmetries and structures within his designs, particularly those based on the
+angle 22.5 degrees (obtained by dividing a full circle into 16ths). In
+Montroll's designs, key creases and vertices -- called <em>references</em> --
+could still be defined with mathematical precision, but their mathematical
+definition could be algebraically much more complex. Instead of being located,
+say, 1/16 of the way across the square (as might happen in box-pleating), in
+Montroll's designs -- and the designs of those who followed -- a key vertex
+might be located at something like 1/(1+2*sqrt(2)) of the way across the square
+-- or worse.
+</p>
+<p>
+There were usually work-arounds, however. Most of the time, one could identify
+one or two of these "irregular" vertices as the "key" vertices from which, once
+located, all others could be derived by folding. Thus, the origami diagrammer
+only had to find a folding sequence for a single point. By trying various
+combinations of folds, one could eventually find a set of folds that came
+reasonably close to the desired point. Or by careful algebraic analysis, once
+could create a geometric construction (analogous to compass-and-straightedge
+construction) that eventually led to the key reference. And from that one key
+reference, all the rest could be derived.
+</p>
+<p>
+This happy status began to fall completely apart in the 1990s, however,
+with the development of circle/river theory and tree theory -- mathematical
+techniques for origami design that resulted in not just one or two irregular
+key vertices, but tens, or even hundreds of vertices that were, at best,
+defined by complex sets of algebraic equations, and in some cases, could only
+be solved-for numerically. These sophisticated origami design techniques made it
+possible to design figures of seemingly boundless complexity; but
+paradoxically, the very process that made it possible to <em>design</em> such
+figures also led to crease patterns that seemed impossible to fold -- at least,
+without measuring and marking a host of points and lines on the paper -- or,
+its modern equivalent, printing out the crease pattern from a computer.
+</p>
+<p>
+This problem with circle-packed designs continues to this day, and has in fact
+insured the continued utilization of box-pleating for some of the most complex
+origami designs; they may not be as efficient as circle-packed designs, but
+they are at least potentially foldable without calculator, ruler, pencil,
+and/or laser printer.
+</p>
+<p>
+Fortunately, a remedy was in the offing. While the mathematicization of origami
+had led to a brand-new problem that afflicted nearly all of the most complex
+origami designs, within mathematics lay also the seeds of a solution.
+</p>
+
+<h2>Hatori Axioms</h2>
+<p>
+In the proceedings of the <em>First International Meeting of Origami Science
+and Technology</em>, Humiaki Huzita and Benedetto Scimemi presented a paper,
+"The Algebra of Paper-Folding (Origami)", in which they identified six
+distinctly different ways one could create a single crease by aligning one or
+more combinations of points and lines (i.e., existing creases) on a sheet of
+paper. Those six operations became known as the <em>Huzita axioms</em>. The
+Huzita axioms provided the first formal description of what types of geometric
+constructions were possible with origami: in a nutshell, quite a lot was
+possible! The six axioms are shown below.
+</p>
+<p align="center">
+  <img src="background_huzita.jpg" alt=""><br>
+  <b>Figure B-1</b>.  The six Huzita axioms.
+</p>
+<p>
+It has been shown that using the six Huzita axioms, it is possible to:
+</p>
+<ul>
+  <li>Solve all quadratic, cubic, and quartic equations with rational coefficients;</li>
+  <li>Trisect an arbitrary angle;</li>
+  <li>Construct cube roots, including the famous problem of "doubling the cube";</li>
+  <li>Construct a regular N-gon for N of the form 
+<!--  2<sup>i</sup>3<sup>j</sup>(2<sup>k</sup>3<sup>l</sup>+1)  -->
+  (2^i)(3^j)((2^k)(3^l)+1)
+  when the last
+  term in parentheses is a prime (a so-called Pierpont Prime);</li>
+</ul>
+<p>
+Huzita's axioms formed the bedrock of the study of origami geometric
+constructions for many years. Thus, it came as something of a shock to learn in
+2002 that we all had missed one! Japanese folder Koshiro Hatori had, in his own
+investigations, found a type of single-fold alignment that could not be
+described in terms of any of the six Huzita axioms. In other words: there was a
+seventh axiom.
+<p align="center">
+  <img src="background_hatori.jpg" alt=""><br>
+  <b>Figure B-2. </b>Hatori's 7th axiom.
+</p>
+<p>
+Hatori describes his discovery on his web site,
+http://origami.ousaan.com/library/conste.html. This discovery of course raised
+the question: are there any more axioms out there? And the answer appears to be
+"no". I [RJL] subsequently performed a complete enumeration of all possible
+alignments that specify a single crease, and all feasible constructions
+correspond to one of the seven axioms. In fact, it turns out that Jacques Justin
+had actually identified all seven axioms in his French-language OST paper
+-- a fact that many of us (myself included) overlooked for many years (due,
+perhaps in part, to the rarity of the proceedings). By this time, the name
+<em>Huzita axioms</em> had come into use for the original six; and the group of
+seven became known as the <em>Huzita-Hatori</em> axioms. (Although it now
+appears that calling them the <em>Huzita-Justin</em> axioms, or even
+<em>Justin-Huzita</em> axioms, might better reflect their original discovery.)
+</p>
+<p>
+At any rate, it turns out that the new axiom doesn't allow the solution of any
+higher-order equations than the original six Huzita axioms. But it's nice to
+have the complete set.
+</p>
+<p>  
+Within the mathematical theory of origami geometric constructions, the seven
+Huzita-Hatori axioms define what is possible to construct by making sequential
+single creases formed by aligning combinations of points and lines. The
+question then arises: is it possible to solve higher-order equations by
+combinations of alignments that define <em>more than one</em> simultaneous
+crease? The answer is yes, and this is now an area of active research by many
+origami mathematicians. There are, in fact, hundreds of "axioms" equivalent to
+the Huzita-Hatori axioms (the exact number depends on what you consider
+"equivalent" axioms) considering pairs of simultaneous creases. But the
+7 HH axioms are all easily performed, and, thanks to the analysis of
+mathematicians, it is known how to combine them to construct points and/or
+lines that are solutions of any equation up to quartic. 
+</p>
+
+<h2>Exact, or Approximate?</h2>
+<p>
+That is, the HH axioms can be used to construct <em>exact</em> solutions to
+quartic equations -- or at least as exact as the reality of folding (and the
+imperfections of both the paper and the human folder) will allow. But not all
+points and lines in a mathematical origami design can be described by quartic
+equations; some are the solutions of trigonometric relations, higher-order
+polynomials, or even sets of mixed trigonometric and polynomial equations.
+</p>
+<p>
+On the other hand, figuring out what equations can be solved by HH axioms is a
+<em>mathematical</em> problem, but finding a folding sequence for a reference
+point or line is a <em>practical</em> problem. We really shouldn't care whether
+a folding sequence is mathematically exact or not, so long as we can't tell the
+difference in the folded shape. That means that no matter what the exact
+reference point is, a folding sequence that gives an approximate solution
+should be perfectly adequate, so long as the approximation is "close enough."
+</p>
+<p>
+And conversely, even a mathematically exact construction of a reference point
+might be highly undesirable, if the folding sequence is long and torturous, or
+if it involves maneuvers that are inherently difficult to make with precision
+-- an example being folding a long, skinny triangular corner. (Try it.) The
+qualities that make a good reference folding sequence include accuracy, but
+they include other things as well: the folding sequence should be short, and it
+should not include inherently imprecise folds.
+</p>
+<p>
+With that in mind, let's turn to the HH axioms and what we can do with them.
+Every HH axiom brings together combinations of preexisting lines and points.
+Lines are typically creases. Points can only be defined in one way: as the
+intersection of two lines. But what do we start with? An unmarked square. An
+unmarked square has no creases.
+</p>
+<p>
+But it does have lines: four of them. The raw edges of the paper define four
+lines to start with. Similarly, the four corners of the square define four
+points. These 8 references, then, are the initial references from which all
+others must be constructed.
+</p>
+<p>
+Starting with these four lines and creases, we can look at what is possible
+with the 7 HH axioms. And the answer is: not much, at least with only one.
+Figure B-3 shows the possibilities. Essentially, you can fold the paper in half
+in one of four different ways, creating four new lines. Two of those lines --
+the vertical and horizontal -- hit the existing edges, creating four new
+points. And if we consider all of the lines possible with a single fold, any
+pair of them creates a fifth new point -- in the very center of the square. And
+some of the axioms are not even possible from this small set of starting
+references.
+</p>
+<p align="center">
+  <img src="background_oneaxiom.png" alt=""><br>
+  <b>Figure B-3. </b>The lines and marks that can be created in an unmarked
+  square by each of the HH axioms.
+</p>
+<p>
+But now, we have a total of eight lines and nine points, and we can repeat the
+process. Taking all possible combinations of these 17 references gives 32 total
+lines and -- carefully counting -- 129 total points. And the results grow very
+rapidly from there -- in fact, exponentially. Just a few more iterations puts
+the numbers of lines and points well into the millions.
+</p>
+<p align="center">
+  <img src="background_threeaxioms.png" alt=""><br>
+  <b>Figure B-4. </b>The lines and marks that can be created in an unmarked
+  square by repeated application of the HH axioms.
+</p>
+<p>
+And that's where the approximations come in. Each point or line in the square
+is the result of a unique sequence of HH axioms. If (as is the case) after 6 or
+so iterations, there are a million distinct points in the square, then there
+are a million sequences of HH axioms, each of which gives a distinct point
+somewhere in the square.
+</p>
+<p>
+With a million points distributed throughout the square, if you pick
+<em>any</em> point in the square, odds are that one of those million sequences
+creates a point that lands very close by. Very close indeed. With a million
+evenly-spaced points, the odds are that the distance to the nearest HH-sequence
+point is less than one part in two thousand -- 0.0005 -- of the side of the
+square. As a practical matter, it is difficult to make any fold in a square
+much more precise than that. (Try it: in a standard 25 cm square, an error of
+.0005 is about two hair widths.) The points creatable by HH axiom sequences are
+not perfectly uniformly distributed, but they are distributed well enough that
+for any random point there is a HH-sequence point nearby.
+</p>
+<p>
+But with a million possible points and folding sequences, how do we find the
+combination that best matches our desired target? That's where
+<em>ReferenceFinder</em> comes in. Computers are extremely good at a couple of
+things: mathematical calculations, and sifting through databases are near the
+top of the list. <em>ReferenceFinder</em> simply calculates <em>all</em>
+possible sequences up to a specified level of complexity. Then, when you ask
+for a particular point or line, it quickly (almost instaneously) sorts through
+the list to find the one closest to the point or line that you are seeking.
+</p>
+
+<p align="center">
+<b>Previous: <a href="index.htm">Introduction</a>&nbsp;&nbsp;&nbsp; 
+Next: <a href="overview.htm">Overview</a></b>
+</p>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+#!/bin/bash
+# This script checks out a fresh copy of wxMac and wxEtc (samples) using branch
+# HEAD and creates a folder named wxWidgets to contain it, then
+# moves and renames the folder to build/wxMac-2.7.
+# usage:
+# ./checkout-wxw
+
+if [ ! -d build ]; then
+  mkdir build
+fi
+
+WXDIR=wxMac-2.7
+if [ -d build/$WXDIR ]; then
+  echo "Error: directory build/$WXDIR already exists; exiting."
+  exit 1;
+fi
+
+WXBRANCH=HEAD
+cvs -d :pserver:anoncvs@cvs.wxwidgets.org:/pack/cvsroots/wxwidgets co -r $WXBRANCH wxMac
+cvs -d :pserver:anoncvs@cvs.wxwidgets.org:/pack/cvsroots/wxwidgets co -r $WXBRANCH wxEtc
+mv wxWidgets build/wxMac-2.7

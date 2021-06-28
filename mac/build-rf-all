@@ -1,0 +1,49 @@
+#!/bin/bash
+# This script rebuilds all configurations of all targets of ReferenceFinder
+# usage:
+# ./build-rf-all
+# ./build-rf-all BUILD_CODE
+#
+# If a BUILD_CODE is supplied, the version file (RFVersion.h) is updated with
+# the given code before building.
+
+if [ $1 ]; then
+  echo "setting build number to $1 in RFVersion.h"
+  VERSION_FILE="../source/RFVersion.h"
+  sed -e "/#define VERSION_BUILD/c\\
+  #define VERSION_BUILD $1" $VERSION_FILE > build/temp_RFVersion.h
+  mv build/temp_RFVersion.h $VERSION_FILE
+else
+  echo "No build code supplied: will use existing value in RFVersion.h"
+fi
+
+# ./build-rf-help
+
+# if ! xcodebuild -project ReferenceFinder.xcodeproj -alltargets -configuration Debug clean
+# then
+#   exit 1
+# fi
+# if ! xcodebuild -project ReferenceFinder.xcodeproj -alltargets -configuration Development clean
+# then
+#   exit 1
+# fi
+# if ! xcodebuild -project ReferenceFinder.xcodeproj -alltargets -configuration Deployment clean
+# then
+#   exit 1
+# fi
+
+# if ! xcodebuild -project ReferenceFinder.xcodeproj -target all -configuration Debug
+# then
+#   exit 1
+# fi
+
+if ! xcodebuild -project ReferenceFinder.xcodeproj -alltargets -configuration Development
+then
+  exit 1
+fi
+if ! xcodebuild -project ReferenceFinder.xcodeproj -alltargets -configuration Deployment
+then
+  exit 1
+fi
+
+exit 0

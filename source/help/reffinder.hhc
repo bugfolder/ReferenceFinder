@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>ReferenceFinder 5.0 Help</title>
+<!-- Sitemap 1.0 -->
+</head>
+<body>
+<object type="text/site properties">
+  <param name="ImageType" value="Folder">
+</object>
+<ul>
+<!--=========================================================================-->
+  <li> <object type="text/sitemap">
+    <param name="Name" value="Background">
+    <param name="Local" value="background.htm">
+    </object>
+  </li> 
+<!--=========================================================================-->
+  <li> <object type="text/sitemap">
+    <param name="Name" value="Overview">
+    <param name="Local" value="overview.htm">
+    </object>
+  </li> 
+<!--=========================================================================-->
+  <li> <object type="text/sitemap">
+    <param name="Name" value="Windows">
+    <param name="Local" value="windows.htm">
+    </object>
+    <ul> 
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Main">
+        <param name="Local" value="windows.htm#Main">
+        </object>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Preferences">
+        <param name="Local" value="windows.htm#Preferences">
+        </object>
+        <ul>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="Database Settings">
+            <param name="Local" value="windows.htm#Database Settings">
+            </object>
+          </li>
+          <li> <object type="text/sitemap">
+            <param name="Name" value="Display Settings">
+            <param name="Local" value="windows.htm#Display Settings">
+            </object>
+          </li>
+        </ul>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Help Window">
+        <param name="Local" value="windows.htm#Help">
+        </object>
+      </li>
+    </ul>
+  </li>
+<!--=========================================================================-->
+  <li> <object type="text/sitemap">
+    <param name="Name" value="Menus">
+    <param name="Local" value="menus.htm">
+    </object>
+    <ul> 
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Application Menu">
+        <param name="Local" value="menus.htm#App">
+        </object>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="File Menu">
+        <param name="Local" value="menus.htm#File">
+        </object>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Edit Menu">
+        <param name="Local" value="menus.htm#Edit">
+        </object>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Action Menu">
+        <param name="Local" value="menus.htm#Action">
+        </object>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Window Menu">
+        <param name="Local" value="menus.htm#Window">
+        </object>
+      </li>
+      <li> <object type="text/sitemap">
+        <param name="Name" value="Help Menu">
+        <param name="Local" value="menus.htm#Help">
+        </object>
+      </li>
+    </ul>
+  </li>
+<!--=========================================================================-->
+</ul>
+</body>
+</html>

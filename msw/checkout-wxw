@@ -1,0 +1,23 @@
+#!/bin/bash
+# This script checks out a fresh copy of wxMSW and wxEtc (samples) using the
+# specified branch and creates a folder named wxWidgets to contain it, then
+# moves and renames the folder to build/wxMSW-2.x (depending on WXDIR, see below).
+# usage:
+# ./checkout-wxw
+
+if [ ! -d build ]; then
+  mkdir build
+fi
+
+WXDIR=wxMSW-2.7
+if [ -d build/$WXDIR ]; then
+  echo "Error: directory build/$WXDIR already exists; exiting."
+  exit 1;
+fi
+
+WXBRANCH=HEAD
+cvs -d :pserver:anoncvs@cvs.wxwidgets.org:/pack/cvsroots/wxwidgets co -r $WXBRANCH wxMSW
+cvs -d :pserver:anoncvs@cvs.wxwidgets.org:/pack/cvsroots/wxwidgets co -r $WXBRANCH wxEtc
+mv wxWidgets build/$WXDIR
+
+exit 0

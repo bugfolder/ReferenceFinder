@@ -1,0 +1,29 @@
+#!/bin/bash
+# This script builds the Mac distribution (disk image) for ReferenceFinder from
+# the latest build. It creates the following:
+# build/ReferenceFinder.dmg
+# usage:
+# ./build-rf-pkg
+
+if [ ! -d build ]; then
+  echo "Error: no build directory."
+  exit 1
+fi
+if [ ! -d build/ReferenceFinder ]; then
+  mkdir build/ReferenceFinder
+fi
+
+if [ ! -d "build/Deployment/ReferenceFinder 4.app" ]; then
+  echo "Error: no Deployment build present"
+  exit 1;
+fi
+
+cp -R -f -p "build/Deployment/ReferenceFinder 4.app" "build/ReferenceFinder/ReferenceFinder 4.app"
+cp -f -p resources/README.txt build/ReferenceFinder/README.txt
+cp -f -p ../LICENSE.txt build/ReferenceFinder/LICENSE.txt
+
+hdiutil create -srcfolder build/ReferenceFinder -ov build/ReferenceFinder.dmg
+
+rm -R build/ReferenceFinder
+
+exit 0

@@ -1,0 +1,96 @@
+/*******************************************************************************
+ReferenceFinder 4.x Change Log
+
+20070213 (4.0.1)
+-- [RJL, all] Modified RefLine::DistanceTo() to properly handle the case where
+a line barely crosses the corner of the square; prior implementation gave
+incorrectly small results. Also updated the Help docs to reflect Justin's
+discovery of the 7 Huzita axioms.
+
+20061129
+-- [RJL, all] Added class RFTextCtrl so that main window responds to both
+RETURN and ENTER keys. (Apparently this is only necessary on Mac, but it doesn't
+hurt elsewhere.)
+
+20061122
+-- [CAF, linux] Added patches to wxGTK2.8.0rc1 to fix (badly) wrong margins
+in print and GNOME print preview.
+-- [RJL, all] Fixed an error in the documentation about the values of the
+constants d and r2.
+
+20061121
+-- [CAF, linux] - Added .cache suffix to temporary directory to avoid name
+collision.
+-- [CAF, all] - fixed error in logic for use of temp directory for help cache
+
+20061118a
+-- [RJL, msw] Rearranged the splash screen's appearance during startup to avoid
+a crash on MSW. (Ordering on Mac and Linux remains unchanged.) 
+-- [RJL, all] Updated About box contents and README files in various places.
+-- [CAF, all] Tweaked PS export to use same header as printed output
+
+20061118
+-- [RJL, all] Added check on line search to insure user picks distinct points.
+-- [RJL, all] Updated the help docs to reflect changes in prefs and menus for
+handling page margins.
+-- [RJL, msw] Changed VS projects so that RF4 is now statically linked to the
+C/C++ runtime libraries.
+
+20061114
+-- [RJL, all] Tweaked upward the preset database settings to bump up the accuracy.
+-- [RJL, all] Changed help cache file handling so that application can be run
+from a read-only volume and we no longer need to build the cache file during
+build.
+-- [RJL, msw+linux] Tweaked RFFrame.cpp and ReferenceFinder.rc to make icons
+available to use for frame and application.
+
+20061113
+-- [RJL, all] Small changes for Windows compatibility. Tweak to model because MS
+STL doesn't like to compare iterators into different containers (thanks, Shai!).
+Cleaned up build directory structure under MSW.
+
+20061111
+-- [RJL, all] Numerous changes to bring RF4 into compatibility with wxW-2.7.x.
+Reworked the paper scaling to respect page margins from page setup dialog.
+Removed separate page margin settings formerly in Preferences. Assorted small
+changes in #includes for compatibility with VSEE2005 (Windows).
+
+20060719
+-- [RJL, all] Fixed a bug in pagination in class RFPrintout.
+-- [CAF, all] Further fixes to parser. Added model/test/test.cpp to code to test
+the parser (not needed for console or gui builds of RF4).
+
+20060718
+-- [RJL, all] Added settings for page margins, implemented in Print Preview and
+printout.
+-- [CAF, all] slightly revised parser (essential)
+-- [CAF, all] RF4's nonGUI (essential)
+-- [CAF, all] ReferenceFinder.h & RFPrefsDialog.* accepting expressions for
+paper dimension (optional/experimental). Essentially I added two members to the
+prefs data and saved the dimension as strings
+-- [RJL, all] Changed RFPrefsDialog parent to gFrame so that menus get properly
+updated.
+-- [RJL, all] Added display of (textual) paper size to diagrams
+-- [RJL, Mac] Patched wxMac so that page setup and print preview work properly.
+
+
+20060626
+-- [RJL, all] Instead of using idle events to update the main frame, I now use
+a wxTimer, which works on all platforms (idle was only on Mac).
+
+20060529
+-- [RJL, all] Added ReferenceFinder::sLinesWorstCaseError as a user setting.
+-- [RJL, all] Tweaked and cleaned up the help files.
+-- [CAF, linux] Added linux build files.
+
+20060522
+--Fixed a bug in Prefs dialog initialization in which current session values
+weren't being used to initialize the panels.
+--Moved friend functions GetBoundingBox() in ReferenceFinder.h out of classes
+to expose them to the world.
+--Bumped up the HTML borders in About box.
+
+20060516
+--Initial development release
+
+*******************************************************************************/

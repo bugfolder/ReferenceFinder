@@ -1,0 +1,38 @@
+#!/bin/bash
+# This script rebuilds the wxWidgets libraries from the XCode project after,
+# e.g., an edit to the source. It doesn't reconstruct the setup.h or chkconf.h
+# modifications.
+# usage:
+# ./rebuild-wxw
+
+WXDIR=wxMac-2.7
+if [ ! -d build/$WXDIR ]; then
+  echo "Error: directory build/$WXDIR doesn't exist."
+  exit 1
+fi
+cd build/$WXDIR
+
+# Clean and build the wxWidgets static libraries
+cd src
+
+if ! xcodebuild -project wxWindows.xcodeproj -alltargets -configuration Development clean
+then
+  exit 1
+fi
+if ! xcodebuild -project wxWindows.xcodeproj -alltargets -configuration Deployment clean
+then
+  exit 1
+fi
+
+if ! xcodebuild -project wxWindows.xcodeproj -target static -configuration Development
+then
+  exit 1
+fi
+if ! xcodebuild -project wxWindows.xcodeproj -target static -configuration Deployment
+then
+  exit 1
+fi
+
+cd ../../..
+
+exit 0

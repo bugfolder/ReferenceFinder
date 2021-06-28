@@ -1,0 +1,15 @@
+To-Do:
+
+**For Version 4.0**
+
+-- [CAF, GTK] fix RFCanvas not receiving resize events when rebuilding database
+   or presenting reference's solution
+-- [CAF, all] make expression parser more flexible
+-- [CAF, Linux] make easier in installer/bundler for renaming files with more
+   than one binary
+
+**For Version 4.1 (or future)**
+
+-- [RJL, all] assign user-settable "effort" rating to individual axioms for
+more fine-grained duplicate resolution
+-- [RJL, all] Make inclusion of initial diagonals individually optional

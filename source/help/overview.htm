@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>ReferenceFinder 5 - Overview</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="StyleSheet" href="reffinder.css" type="text/css">
+</head>
+<body>
+
+<h1 align="center"><em>Overview</em></h1>
+
+<p>
+This page gives a brief overview of <em>ReferenceFinder</em> to get you
+started. The screen images shown are from the Macintosh version of
+<em>ReferenceFinder</em>, but windows on other platforms should look similar.
+</p>
+<p>
+When <em>ReferenceFinder</em> first starts up, it will display its main window
+while it constructs its database of points and lines. This initialization will
+take a few seconds to a few minutes (depending on the speed and memory of your
+machine), but <em>ReferenceFinder</em> will regularly update the progress as it
+works.
+</p>
+<p align="center">
+  <img src="overview_1.png" alt=""><br>
+  <b>Figure O-1. </b>The main window after startup while it initializes.
+</p>
+When initialization is complete, <em>ReferenceFinder</em> will display "Ready"
+and the number of points (marks) and lines that it has constructed in
+preparation for your search.
+<p>
+</p>
+<p align="center">
+  <img src="overview_2.png" alt=""><br>
+  <b>Figure O-2. </b>The main window after initialization is complete.
+</p>
+<p>
+The main window contains a few controls that let you choose what you are
+looking for. The two radio buttons, <b>Point</b> and <b>Line</b>, select
+whether you're seeking to create a point or a fold line. If you select
+<b>Point</b>, you will enter the <em>x</em> and <em>y</em> coordinates of the
+point in the adjacent text boxes. If you select <b>Line</b>, then you will need
+to enter <em>x</em> and <em>y</em> coordinates for two distinct points along
+the line.
+</p>
+<p>
+The default paper size is a unit square, so all coordinates values should be
+between 0 and 1. (You can change the paper size in the Preferences if, for
+example, you're using A4 paper.) You can enter coordinates either as their
+decimal values (e.g., 0.4142), or as a mathematical expression (e.g.,
+sqrt(2)-1, or even d-1). Expressions may contain any of the operators +, -, *,
+/, ^, (), sqrt, sin, cos, tan, deg2rad and constants e, pi, phi, Phi, and d,
+which is an abbreviation for sqrt(2) (which shows up a lot in origami crease
+patterns). Trigonometric functions use radians. Function deg2rad converts
+degrees to radians. If you enter an expression that <em>ReferenceFinder</em>
+can't interpret, or that interprets to a point outside the paper,
+<em>ReferenceFinder</em> will let you know so that you can take corrective
+action.
+</p>
+<p>
+Once you have entered the coordinate values for one or two points, you can
+select <b>Action->Get Reference</b> or simply hit the Return or Enter key.
+<em>ReferenceFinder</em> immediately finds several folding sequences that give
+the desired point or line and displays folding diagrams and verbal directions
+for them in the window. At this point, the <b>File->Print...</b> command will
+be enabled, and you can print the resulting diagrams for a permanent record.
+</p>
+<p align="center">
+  <img src="overview_3.png" alt=""><br>
+  <b>Figure O-3. </b>Some solutions found by <em>ReferenceFinder</em>.
+</p>
+<p>
+For each sequence, <em>ReferenceFinder</em> displays the error between the
+displayed sequence and your chosen target, and the <em>rank</em>, which is the
+number of folds needed to create the mark or line from a blank paper. Sequences
+with smaller rank are shown first; within a given rank, the lowest error is
+shown first.
+</p>
+<p>
+That's all there is to it. If you want to find another point or line, enter new
+coordinates and hit Return.
+</p>
+<p>
+There are several settings you can adjust within <em>ReferenceFinder</em> that
+affect the screen display and the database of references; these let you
+set the paper dimensions, trade off initialization time against accuracy, and
+even choose which of the Huzita-Hatori axioms to use in constructing
+references. All of these settings are accessible through the Preferences
+command, which is described later in this documentation. At any point, you can
+refer to the Help menu for explanations of menu commands, windows, and
+possible actions.
+</p>
+
+<p align="center">
+<b>Previous: <a href="background.htm">Background</a>&nbsp;&nbsp;&nbsp; 
+Next: <a href="windows.htm">Windows</a></b>
+</p>
+
+</body>
+</html>

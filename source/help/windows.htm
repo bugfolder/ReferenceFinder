@@ -1,0 +1,476 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>ReferenceFinder 5 - Windows</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="StyleSheet" href="reffinder.css" type="text/css">
+</head>
+<body>
+
+<h1 align="center">Windows</h1>
+
+<p>
+There are three major windows in <em>ReferenceFinder</em> (as well as a few
+dialog boxes). They are:
+<ul>
+  <li>
+    The <a href="#Main">Main</a> window. Most things happen here. You specify
+    the point or line that you're seeking and it displays the folding sequence
+    for said point or line. When it's not showing folding sequences, it shows
+    information about the database of points and lines.
+  </li>
+  <li>
+    The <a href="#Preferences">Preferences</a> window. This lets you change
+    settings (on a per-session or permanent basis) that affect the database
+    (paper size, accuracy, axiom choices) and the display (text and
+    diagram size, etc.).
+  </li>
+  <li>
+    The <a href="#Help">Help</a> window, which displays this documentation;
+    its contents can also be printed out if you'd like a hard copy.
+  </li>
+</ul>
+<p>
+The following sections describe these windows.
+</p>
+<ul>
+  <li>
+    Note: all of the screen images are taken from the Macintosh version of
+    <em>ReferenceFinder</em>. Windows or GNU/Linux should look similar in
+    their content, but may have differences in title bars, borders, and/or
+    size controls.
+  </li>
+</ul>
+
+
+<h2><a name="Main">Main Window</a></h2>
+<p>
+The main window comes up after the startup screen each time the program is run.
+(On first run, the About box is shown first, but you can turn that off from
+within the dialog box.) Most of your interaction will be with the main window.
+</p>
+<p>
+When <em>ReferenceFinder</em> first starts up, it begins calculating a database
+of points (marks) and lines. This initialization will take a few seconds to a
+few minutes (depending on the speed and memory of your machine), but
+<em>ReferenceFinder</em> will display and update its progress as it works.
+</p>
+<p>
+The number of marks and lines is determined by settings in the Preferences
+dialog (see below), but you can halt the calculation at any time by pressing
+Command+Period (Control+C on GNU/Linux and Windows). However, if you halt the
+construction of the database, <em>ReferenceFinder</em> will search among only
+those marks and lines it had found before you stopped the construction. You will
+have to re-start the database construction from scratch to use the full
+database. For this reason, you will probably rarely, if ever, want to halt the
+calculation. You don't need to halt calculation before quitting the program.
+</p>
+<p align="center">
+  <img src="windows_1.png" alt=""><br>
+  <b>Figure W-1. </b>The main window after startup while it initializes.
+</p>
+When initialization is complete, <em>ReferenceFinder</em> will display that it
+is ready (in darker type) and will show the number of points (marks) and lines
+that it has constructed in preparation for your search.
+<p>
+</p>
+<p align="center">
+  <img src="windows_2.png" alt=""><br>
+  <b>Figure W-2. </b>The main window after initialization is complete.
+</p>
+<p>
+The main window contains a few controls that let you choose what you are
+looking for. The two radio buttons, <b>Point</b> and <b>Line</b>, select
+whether you're seeking to create a point or a fold line. If you select
+<b>Point</b>, you will enter the <em>x</em> and <em>y</em> coordinates of the
+point in the adjacent text boxes. If you select <b>Line</b>, then you will need
+to enter <em>x</em> and <em>y</em> coordinates for two distinct points along
+the line.
+</p>
+<p>
+The default paper size is a unit square, so all coordinates values should be
+between 0 and 1. (You can change the paper size in the Preferences if, for
+example, you're using A4 paper.) You can enter coordinates either as their
+decimal values (e.g., 0.4142), or as a mathematical expression (e.g.,
+sqrt(2)-1). Expressions may contain any of the operators +, -, *,
+/, ^, (), sqrt(), sin(), cos(), tan(), deg2rad(), and constants e, pi, 
+phi (the Golden Ratio), Phi (same thing),
+d, (the diagonal of the paper), and
+r2 (an abbreviation for sqrt(2), which shows up a lot in origami
+crease patterns). Trigonometric functions use radians. The function deg2rad()
+converts degrees to radians. If you enter an expression that
+<em>ReferenceFinder</em> can't interpret, or that interprets to a point outside
+the paper, <em>ReferenceFinder</em> will let you know so that you can take
+corrective action.
+</p>
+<p>
+Once you have entered the coordinate values for one or two points, you can
+select <b>Action->Get Reference</b> or simply hit the Return or Enter key.
+<em>ReferenceFinder</em> immediately finds several folding sequences that give
+the desired point or line and displays folding diagrams and verbal directions
+for them in the window. At this point, the <b>File->Print...</b> command will
+be enabled, and you can print the resulting diagrams for a permanent record.
+</p>
+<p align="center">
+  <img src="windows_3.png" alt=""><br>
+  <b>Figure W-3. </b>Some solutions found by <em>ReferenceFinder</em> for a point.
+</p>
+<p>
+For each sequence, <em>ReferenceFinder</em> displays the error between the
+displayed sequence and your chosen target, and the <em>rank</em>, which is the
+number of folds needed in the sequence. Sequences with smaller rank are shown
+first; within a given rank, the lowest error is shown first.
+</p>
+<p align="center">
+  <img src="windows_4.png" alt=""><br>
+  <b>Figure W-4. </b>Some solutions found by <em>ReferenceFinder</em> for a line.
+</p>
+<p>
+For marks, the error is simply the distance between the target mark and the
+actual mark created by the folding sequence. For lines, the error is either the
+Pythagorean distance between the control parameters of the two lines (faster)
+or the worst-case separation within the paper between the target line and the
+folded line (slower but more accurate). The error criterion is set in the
+Preferences window.
+</p>
+<p>
+Note that you can enter values into the text fields while the database is under
+construction, but you won't be able to perform any searches until the database
+is ready.
+</p>
+<p>
+To find folding sequences for a reference, you can select the <b>Action->Get
+References</b> command, or just hit Return or Enter while you're typing in a
+text box. To clear the display of references, select <b>Action->Clear
+References</b>. This reduces the window size, but isn't necessary before
+performing a new search.
+</p>
+<p>
+The main window also can display statistical information about the current
+database. You normally won't need to do this, but if you're tinkering with the
+Preferences, it can be useful to calculate statistics to trade off speed versus
+accuracy.
+</p>
+
+
+
+
+
+<h2><a name="Preferences">Preferences Window</a></h2>
+<p>
+The <b>Preferences</b> window lets you make per-session or permanent changes to
+how <em>ReferenceFinder</em> constructs the database and how it displays
+information in the main window. The <b>Preferences</b> command is found under
+the Application menu (File menu under Windows and GNU/Linux); it brings up the
+Preferences window, which has two switchable panels.
+</p>
+<p>
+Both panels in the <b>Preferences</b> window have a row of buttons across the
+bottom of the panel. Their function is as follows:
+</p>
+<ul>
+  <li>
+    Factory Defaults - Restore the original default values of all database
+    settings, both for this session, and as the default values for the program.
+  </li>
+  <li>
+    Make Default - Make the currently entered settings the default values for
+    this session and each time the program is started up in the future.
+  </li>
+  <li>
+    Restore Default - Restore the current default settings to apply to this
+    session.
+  </li>
+  <li>
+    Apply - Apply the currently entered settings to the current session. If any
+    entry has an invalid value, an error dialog will be put up and no changes
+    will be made.
+  </li>
+  <li>
+    Done - Close the dialog box. None of the control values will be applied;
+    you must click Apply or Make Default in order to apply any entries you've
+    made in the panel before you click Done.
+  </li>
+</ul>
+
+<h3><a name="Database Settings">Database Settings</a></h3>
+
+<p>
+The <b>Database Settings</b> panel contains settings that affect the database
+of marks and lines, affecting which axioms are used, which combinations of
+axioms are allowed, and tradeoff of memory usage and speed of initialization
+against accuracy in the resulting folding sequences.
+</p>
+<p align="center">
+  <img src="windows_5.png" alt=""><br>
+  <b>Figure W-5. </b>The Database Settings panel.
+</p>
+<p>
+Any change to the Database Settings (i.e., clicking on any button other than
+Done) will restart the initialization of the database with the new settings.
+</p>
+<p>
+The Database Settings panel contains several groups, as follows.
+</p>
+
+<h4>Paper</h4>
+<p>
+The Paper group lets you set the dimensions of the paper, which must be
+rectangular. The default values are for square paper, with unit width and
+height. While you can change both values, normally you will only change one of
+either width or height.
+</p>
+
+<h4>Size Limits</h4>
+<p>
+The Size Limits group sets upper bounds on the size of the database. Be careful
+when you adjust these; there is an exponential relationship between database
+size and rank, which makes it very easy to create size combinations that
+outstrip the processing power and/or memory available to the program.
+</p>
+<ul>
+  <li>
+    Max Rank - This sets the maximum rank for any sequence, which is the number
+    of folds involved in the sequence. <em>ReferenceFinder</em> will calculate
+    all marks and lines up to the maximum rank, subject to the two following
+    limits. As a practical matter, you will rarely need to set this any larger
+    than 6 or 7; rank 6 can include over a million distinct lines.
+  </li>
+  <li>
+    Max Lines - This sets an absolute upper bound on the number of lines to
+    calculate. Even if you are only searching for points,
+    <em>ReferenceFinder</em> needs to calculate a large number of lines since
+    points are defined by the intersections of existing lines.
+  </li>
+  <li>
+    Max Points - This sets a absolute upper bound on the number of marks to
+    calculate. As a rough estimate, if this setting is <em>N</em>, the average
+    error in any given point is proportional to 1/(2*sqrt(<em>N</em>)). This is
+    not exact, since points tend to cluster along low-rank lines, but as a good
+    rule of thumb, half a million to a million points will give a good error
+    performance.
+  </li>
+</ul>
+
+<h4>Huzita-Hatori Axioms</h4>
+<p>
+The Huzita-Hatori Axioms group lets you choose which of the 7 axioms to include
+in the database. The default is to include all 7, but you can exclude one or
+more. Of course, the more axioms you exclude, the higher the rank you'll need
+to allow to obtain a given level of accuracy.
+</p>
+
+<h4>Key Size</h4>
+<p>
+The Key Size group contains settings that affect how duplicates and
+near-duplicates are handled. It is quite common that there is more than one
+combination of HH axioms that can create a given mark or line. (In fact,
+duplicates are far more common than unique combinations.) To avoid duplicates,
+<em>ReferenceFinder</em> keeps the lowest-rank sequence for any given mark or
+line. To specifically test for equivalence, the paper is divided up into a fine
+grid, according to the "X Divisions" and "Y Divisions" settings. Two marks are
+considered equivalent if they fall within the same grid square, and only one of
+them will be kept.
+</p>
+<p>
+By playing with this setting, you can increase the number of grid squares,
+which allows more closely-spaced marks to be considered distinct. This may or
+may not be desirable; if you've set an absolute uppper bound on the number of
+marks, you might rather have <em>ReferenceFinder</em> keep looking to fill
+empty grid squares rather than finding many tightly-grouped marks. So you can
+trade this setting off against the Size Limits group.
+</p>
+<p>
+The other two settings for lines operate similarly, but instead of dividing the
+paper up into grid squares (which works for points), lines are characterized by
+their angle and distance of closest approach to the origin, and so these two
+settings are similarly quantized.
+</p>
+
+<h4>Misc Settings</h4>
+<p>
+The Misc Settings group contains a few additional settings that set acceptance
+criteria for the folding sequences in the database.
+</p>
+<ul>
+  <li>
+    "Good Enough Error" - When a search is performed, <em>ReferenceFinder</em>
+    finds all marks (or lines) whose distance error (or an analogous quantity
+    for lines) is better than this value. Essentially, this value is the error
+    that you're willing to tolerate. Within this error, low-rank marks are
+    considered more desirable (easier to fold) and so they will be displayed
+    before higher-rank marks, even if the latter have lower errors.
+  </li>
+  <li>
+    Minimum Aspect Ratio - As a practical matter, it is very difficult to fold
+    a long, skinny corner so that the resulting crease is straight; it is very
+    easy for the crease to wander. If a given sequence requires the folding of
+    a triangular flap with an aspect ratio smaller than this, it is not
+    accepted into the database. If you don't care about this issue, you can set
+    the value to zero.
+  </li>
+  <li>
+    Minimum Angle Sine - Similarly, if two creases intersect at a very shallow
+    angle, the location of the point at their intersection is inherently
+    imprecise. This value is the sine of the minimum angle allowed for such
+    intersections. If you don't care about this issue, you can set the value to
+    zero.
+  </li>
+  <li>
+    Database Status Skip - During initialization, the database routine
+    periodically calls back to the GUI to update what's on the screen. This
+    callback process can significantly slow down the database calculation, so
+    the callback happens only infrequently. This number sets how many
+    combinations of folds to examine between calls to the GUI. (Note that this
+    number is not particularly related to the growing database size you'll see
+    on-screen, because vastly more combinations are examined than are accepted
+    into the database.)
+  </li>
+  <li>
+    Visibility Matters - If this is checked, then the only alignments that are
+    allowed are those in which all reference points are visible with opaque
+    paper. (In some alignments, one of the layers can conceal the relevant
+    reference point.) If you are folding with translucent paper, you can
+    uncheck this setting, which will allow a larger number of folding sequences
+    to be considered.
+  </li>
+  <li>
+    Lines Use Worst-Case Error - If this is checked, then the error between two
+    lines is calculated to be the worst-case separation between the two lines
+    within the paper. If this is unchecked, we use the faster (but less
+    accurate) Pythagorean difference between the parameters that define the
+    line.
+  </li>
+</ul>
+
+
+<h3><a name="Display Settings">Display Settings</a></h3>
+
+<p>
+The <b>Display Settings</b> panel contains settings that affect how folding
+sequences are displayed on the screen.
+</p>
+<p align="center">
+  <img src="windows_6.png" alt=""><br>
+  <b>Figure W-6. </b>The Display Settings panel.
+</p>
+<p>
+The <b>Display Settings</b> panel contains several groups, as follows.
+</p>
+
+<h4>Layout</h4>
+<p>
+The Layout group affects the screen display of the diagrams and textual
+instructions.
+</p>
+<ul>
+  <li>
+    Unit Pixels - Specifies how many screen pixels correspond to a single unit
+    in paper size. If this value is 80, then a unit square (the default) will
+    be 80 pixels wide on screen.
+  </li>
+  <li>
+    Text Size - Specifies the text size, in screen pixels (which is usually
+    close to points).
+  </li>
+  <li>
+    Text Spacing - Specifies distance in screen pixels from the baseline of one
+    line of text to the baseline of the next.
+  </li>
+  <li>
+    Diagram Spacing - Specifies the gap in screen pixels between adjacent
+    diagrams.
+  </li>
+</ul>
+<p>
+Note that these settings affect the screen display in absolute terms and the
+printed image in relative terms. Printouts are always scaled so that the widest
+line of diagrams exactly fits the printed page, with page breaks (if needed)
+between sets of diagrams.
+</p>
+
+<h4>Verbal Directions</h4>
+<p>
+The Verbal Directions group contains two settings that affect the verbal
+directions that appear underneath the diagrams.
+</p>
+<ul>
+  <li>
+    Clarify Verbal Ambiguities - Some alignments (notably Axiom 6) allow more
+    than one solution. When this setting is checked, the verbal directions will
+    contain coordinate information that makes clear which of the multiple
+    solutions is the preferred one. Of course, with diagrams visible, the
+    diagram will usually provide sufficient information, so this setting is
+    primarily useful in verbal-only instructions.
+  </li>
+  <li>
+    Note Axioms in Verbal Directions - If this is checked, for each verbal
+    direction, the number of the relevant axiom is given.
+  </li>
+</ul>
+
+<h4>Search</h4>
+<p>
+The Search group contains one setting, which specifies how many folding
+sequences to find for each search. If you just want the shortest sequence that
+beats the "Good Enough" error, you can set this value to 1. Normally, though,
+it's a good idea to examine several sequences to find the one that fits most
+naturally with other sequences or that creates the least-obtrusive auxiliary
+lines.
+</p>
+
+<h4>Statistics</h4>
+<p>
+These settings affect the calculation of statistics on the current database,
+which is not needed in normal usage but provides useful information if you're
+tweaking the database settings.
+</p>
+<p>
+The statistical calculation uses the current database and picks a large number
+of random points within the paper for which to find sequences.
+<em>ReferenceFinder</em> finds the best sequence for each point, and records
+the error in this sequence in one of several equally-spaced buckets. After
+running many trials, the resulting statistics are reported, including the
+percent of trials with error better than each bucket value, and the errors
+associated with each percentile within the trials.
+</p>
+<ul>
+  <li>
+    Num Error Buckets - Sets the number of distinct error buckets to use. This
+    doesn't affect the speed of calculation significantly.
+  </li>
+  <li>
+    Error Bucket Size - This sets the range of error recorded for each bucket.
+    You might have to play with this value as you change database settings to
+    insure that the recorded errors are reasonably distributed among the
+    buckets (i.e., not all in the first or last).
+  </li>
+  <li>
+    Number of Trials - This sets the number of randomly-chosen test points. The
+    larger this value, the more accurate your statistics are, but of course,
+    the longer the calculation will run.
+  </li>
+</ul>
+<p>
+See the description of the <b>Action->Calculate Statistics</b> menu commond for
+more information about the statistical analysis.
+</p>
+
+
+<h2><a name="Help">Help Window</a></h2>
+<p>
+The Help window is brought up if you click the <b>Help->Help</b> menu command.
+(If you're reading this from within <em>ReferenceFinder</em>, it's the window
+you're looking at.) The window is resizeable and searchable, and there is a
+table of contents bar along the left side. If you would like a hard copy of
+this documentation you can print each of the major help sections by clicking on
+the printer icon within the window.
+</p>
+
+<p align="center">
+<b>Previous: <a href="overview.htm">Overview</a>&nbsp;&nbsp;&nbsp; 
+Next: <a href="menus.htm">Menus</a></b>
+</p>
+
+</body>
+</html>
